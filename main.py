@@ -31,7 +31,8 @@ with open(file_path, 'r', encoding='utf-8') as file:
 
 print("")
 def right_dates(string):
-    pattern = r'^20[0-2][0-9]-((0[1-9])|(1[0-2]))-([0-2][1-9]|3[0-1])'
+    #pattern = r'^20[0-2][0-9]-((0[1-9])|(1[0-2]))-([0-2][1-9]|3[0-1])'
+    pattern = r'((19\d\d|20\d\d)-(0[3-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))|((19\d\d|20\d\d)-(02)-(0[1-9]|[12]\d|29]))|((19\d\d|20\d\d)-(01)-(0[1-9]|[12]\d|3[01]))'
     if re.match(pattern, string):
         return True
     else:
